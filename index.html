@@ -321,7 +321,23 @@
                             <use href="./images/sprite.svg#icon-cross"></use>
                         </svg>
                     </button>
-                <form action=""></form>
+                    <h4 class="form-title">Leave your contacts and we will call you back</h4>
+                    <form action="" class="form-container">
+                    
+                        <label for="name"><b>Name</b></label>
+                        <input class="enter-name" type="text" name="name">
+                    
+                        <label for="phone"><b>Phone</b></label>
+                        <input class="enter-phone" type="text" name="phone">
+
+                        <label for="email"><b>Email</b></label>
+                        <input class="enter-email" type="text" name="email">
+
+                        <label for="comments"><b>Comment</b></label>
+                        <input class="enter-comment" type="text" placeholder="Text Input" name="comment" required>
+                    
+                        <button type="submit" class="send-button">Send</button>
+                    </form>
                 </div>
             </div>
         </main>
@@ -371,7 +387,7 @@
                                 <h3 class="footer-titles">Subscribe</h3>
                                 <div class="footer-subscribtion-gap">
                                     <input class="footer-input" type="text" id="Name" name="Name" placeholder="Email:">
-                                    <button class="footer-subscribe-button" type="button">
+                                    <button class="footer-subscribe-button" type="submit">
                                         Subscribe
                                         <svg width="24" height="24">
                                             <use href="./images/sprite.svg#icon-Paper-plane"></use>
