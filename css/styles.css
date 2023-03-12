@@ -577,12 +577,14 @@ footer {
 }
 
 .send-button {
+    display: block;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.04em;
     font-family: 'Roboto';
     padding: 16px 32px;
+    width: 169px;
     background-color: var(--Iris-color);
     border-radius: 4px;
     border: none;
