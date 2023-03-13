@@ -419,7 +419,6 @@ footer {
 
 .footer-flex {
     display: flex;
-    gap: 120px;
 }
 
 .icons-footer {
@@ -451,15 +450,11 @@ footer {
     line-height: 1.5;
 }
 
-.footer-icons-and-sub-button {
-    display: flex;
-    gap: 80px;
-}
-
 .footer-input {
     width: 264px;
     height: 40px;
     padding: 8px 16px;
+    color: var(--white-color);
     background-color: var(--Navy-blue-color);
     border: 1px solid rgba(255, 255, 255, 0.3);
     border-radius: 4px;
@@ -487,6 +482,11 @@ footer {
     color: var(--white-color);
 }
 
+.footer-icons-div {
+    margin-left: 120px;
+    margin-right: 80px;
+}
+
 .backdrop.is-hidden {
     visibility: hidden;
     opacity: 0;
@@ -501,12 +501,13 @@ footer {
     left: 0;
     opacity: 1;
     visibility: visible;
-    background-color: rgba(46, 47, 66, 0.4); /*Змінна не працювала тут, тому і рбг код*/
+    background-color: rgba(46, 47, 66, 0.4);
     transition: 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .modal {
     position: absolute;
+    padding: 72px 24px 24px;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
@@ -544,7 +545,7 @@ footer {
 
 .form-container {
     max-width: 360px;
-    padding-top: 16px;
+    margin-top: 16px;
     font-size: 12px;
     line-height: 1.25;
     color: var(--lightslate-color);
@@ -556,28 +557,29 @@ footer {
     font-size: 16px;
     line-height: 1.5;
     font-weight: 500;
-    padding-top: 72px;
     letter-spacing: 0.02em;
     color: var(--Navy-blue-color);
     text-align: center;
 }
 
-.enter-name, .enter-phone, .enter-email {
-    width: 360px;
-    height: 40px;
-    border: 1px solid rgba(33, 33, 33, 0.2);
-    border-radius: 4px;
-}
-
 .enter-comment {
-    width: 360px;
-    height: 120px;
+    max-width: 360px;
+    max-height: 120px;
+    min-width: 360px;
+    min-height: 120px;
+    padding: 8px 16px;
     border: 1px solid rgba(33, 33, 33, 0.2);
     border-radius: 4px; 
 }
 
+.enter-comment:focus {
+    outline: none !important;
+    border-color: rgba(77, 90, 229, 1);
+}
+
 .send-button {
     display: block;
+    margin: 21px auto 0;
     font-weight: 500;
     font-size: 16px;
     line-height: 1.5;
@@ -589,4 +591,66 @@ footer {
     border-radius: 4px;
     border: none;
     color: var(--white-color);
+}
+
+.input-icon-box {
+    position: relative;
+    margin: 4px 0 8px;
+}
+
+.icons-in-form {
+    position: absolute;
+    top: 8px;
+    left: 26px;
+} 
+
+.input {
+    width: 360px;
+    height: 40px;
+    border: 1px solid rgba(33, 33, 33, 0.2);
+    border-radius: 4px;
+}
+
+.input:focus { 
+    outline: none !important;
+    border-color: rgba(77, 90, 229, 1);
+    fill: rgba(77, 90, 229, 1);
+}
+
+.input-icon-box:focus-within {
+    border-color: rgba(77, 90, 229, 1);
+    fill: rgba(77, 90, 229, 1);
+}
+
+.checkbox-label1 {
+    display: flex;
+    align-items: center;
+    margin-top: 16px;
+    font-size: 12px;
+    line-height: 1.25;
+    letter-spacing: 0.04em;
+}
+
+.checkbox-label1::before {
+    display: block;
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    border: 1px solid var(--black-color);
+    border-radius: 2px;
+    cursor: pointer;
+    content: '';
+}
+
+.privacypolicy{
+    display: none;
+}
+
+.privacypolicy:checked + .checkbox-label1::before {
+    background-color: var(--Iris-color);
+    background-image: url(/images/check.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 10px 8px;
+    border: 1px solid var(--Iris-color);
 }
